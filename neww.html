@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>bank form</title>
+    <style>
+      h3 { text-align: center;      }
+      h5 {        text-align: center;      }
+
+      .custfieldset {
+        width: 40%;
+      }
+     
+      .flexcontainer{
+        display:flex;
+        justify-content: space-between; 
+      }
+      .dateandtime {
+        text-align: right;
+        margin-left: 80%;
+        margin-top: -6%;
+        border: none;}
+
+      .personal{
+        width: 98%;
+      }
+      table {
+  border-spacing: 6px;
+  width: 100%;
+  }
+      td {
+  padding-top: 5px;
+  padding-bottom:5px;
+  padding-left:5px;
+  padding-right: 5px;
+  text-align:center;
+
+      }
+      .contact{
+        width: 98%;
+      }
+
+      
+      .documents{
+        width: 98%;
+
+      }
+
+ </style>
+  </head>
+  <body>
+    <form>
+      <h3>SAVING BANK ACCOUNT OPENING FORM</h3>
+      <h5>(for BASIC/SMALL SB a/c)</h5>
+      <hr />
+      <fieldset class="custfieldset">
+        <legend>For Bank Use Only</legend>
+        <label for="Name">Name & Code of branch</label><br />
+        <label for="CustID">Cust ID</label>
+        <input type="text" id="CustID" name="Cust ID" /><br />
+        <label for="number">A/C No.</label>
+        <input type="text" id="number" name="AC no." />
+      </fieldset>
+      <fieldset class="dateandtime">
+        <label for="Date">Date</label>
+        <input type="date" id="Date" name="Date" /><br />
+        <label for="time">Time</label>
+        <input type="time" id="Time" name="time" />
+      </fieldset>
+      <br>
+      <fieldset class="personal">
+        <legend>Personal Information</legend>
+        <table border="2">
+          <tr>
+            <td>1</td>
+            <td >Name in full</td>
+            <td colspan="3"><input type="text" id="name" name="name"></td>
+            <td rowspan="4"><div class="box">image</div></td>
+            </tr>
+            <tr>
+            <td>2</td>
+            <td>Guardian Name</td>
+            <td colspan="3">
+            <input type="text" id="guardian_name" name="guardian_name"></td>
+          </tr>
+            <tr>
+            <td>3</td>
+            <td>Gender</td>
+            <td>
+            <label for="option1">Male</label>
+            <input type="radio" id="option1" name="options" value="option1">
+            <label for="option2">Female</label>
+            <input type="radio" id="option2" name="options" value="option2">
+            <br>
+            </td>
+            <td>Date of birth</td>
+            <td>
+            <input type="date" id="dob" name="dob">
+            </td>
+          </tr>
+            <tr>
+            <td>4</td>
+            <td>Occupation</td><td>
+              <label for="occupation"></label>
+              <input type="text" id="occupation" name="occupation">
+            </td>
+            <td>Category</td>
+            <td>
+              <select>
+              <option value="option1">Option 1</option>
+              <option value="option2">Option 2</option>
+              <option value="option3">Option 3</option>
+              </select>
+            </td>
+          </tr>
+            <tr>
+            <td>5</td>
+            <td>Martial Status</td>
+          <td>
+            <label for="option1">Married</label>
+            <input type="radio" id="option1" name="options" value="option1">
+            <label for="option2">Unmarried</label>
+            <input type="radio" id="option2" name="options" value="option2">
+            <label for="option3">Widowed</label>
+            <input type="radio" id="option3" name="options" value="option3">
+            </td>
+          <td>Signature</td><td>
+          <label for="signature"></label>
+          <input type="text" id="signature" name="signature">
+          </td>
+          <td>              
+            <input type="text" id="signature" name="signature"></td>
+          </tr>
+        </table>
+        </fieldset>
+        <fieldset class="contact">
+        <legend>Contact Details</legend>
+            <table border="2">
+              <tr>
+                <td>Mobile No.</td>
+                <td colspan="2"><input type="text" id="name" name="name"></td>
+                <td>Mobile no. 2</td>
+                <td colspan="2"><input type="text" id="name" name="name"></td>
+                <td>Telephone/Landline</td>
+                <td colspan="2"><input type="text" id="name" name="name"></td>
+                </tr>
+              <tr>
+                <td>Personal email</td>
+                <td colspan="3"><input type="text" id="name" name="name"></td>
+                <td>Professional Email</td>
+                <td colspan="3"><input type="text" id="name" name="name"></td>
+              </tr>
+              <tr>
+                <td rowspan="2">Current Address</td>
+                <td rowspan="2"><input type="text" id="name" name="name"></td>
+                <td>Village/city</td>
+                <td colspan="2"><input type="text" id="name" name="name"></td>
+                <td>District</td>
+                <td colspan="2"><input type="text" id="name" name="name"></td>
+                <tr>
+                <td>State</td>
+                <td colspan="2"><input type="text" id="name" name="name"></td>
+                <td>Pincode</td>
+                <td colspan="2"><input type="text" id="name" name="name"></td>
+                </tr>
+              </tr>
+              <tr>
+                <td rowspan="2">Permanent Address</td>
+                <td rowspan="2"><input type="text" id="name" name="name" placeholder="permanent_address"></td>
+                <td>Village/city</td>
+                <td colspan="2"><input type="text" id="name" name="name"></td>
+                <td>District</td>
+                <td colspan="2"><input type="text" id="name" name="name"></td>
+                <tr>
+                <td>State</td>
+                <td colspan="2"><input type="text" id="name" name="name"></td>
+                <td>Pincode</td>
+                <td colspan="2"><input type="text" id="name" name="name"></td>
+                </tr>
+              </tr>
+          </table>
+        </fieldset>  <br> 
+        <fieldset class="documents">
+          <legend>Documents</legend>
+          <table border="2">
+            <tr>
+              <td>Aadhar No.</td>
+              <td colspan="1"><input type="text" id="name" name="name"></td>
+              <td><input type="file" id="name" name="name"></td>
+              <td>PAN card</td>
+              <td colspan="1"><input type="text" id="name" name="name"></td>
+              <td><input type="file" id="name" name="name"></td>
+            </tr>
+            <tr>
+              <td>Electricity Bill</td>
+              <td colspan="2"><input type="file" id="name" name="name"></td>
+              <td>Gas Bill</td>
+              <td colspan="2"><input type="file" id="name" name="name"></td>
+            </tr>
+          </table>
+        </fieldset>
+        <br>
+        <hr>
+      </table>
+      <p>Please open a Savings Bank account in the name of Mr./Ms. ____________.</p>
+      <p>The Saving Bank rules and regulations, including those relating to Small Account, have been explained to me, and I agree to abide by the same. An additional photograph is attached.</p>
+      <table>
+          <tr>
+              <td>Date: <input type="date" name="form_date"></td>
+              <td>Place: <input type="text" name="place"></td>
+              <td>Signature:</td>
+              <td><input type="text" name="signature_verification"></td>
+          </tr>
+      </table>      
+    </form>
+    </body>
+</html>

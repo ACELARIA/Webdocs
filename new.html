@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>bank form</title>
+    <style>
+      h3 {
+        text-align: center;
+      }
+      h5 {
+        text-align: center;
+      }
+
+      .custfieldset {
+        width: 40%;
+      }
+
+      .dateandtime {
+        text-align: right;
+        margin-left: 80%;
+        margin-top: -6%;
+        border: none;
+      }
+      label {
+        display: block;
+        float: left;
+      }
+      input {
+        display: inline-table;
+      }
+      .PC {
+        display: grid;
+        grid-template-columns: 40px 150px 400px;
+
+        
+      }
+      .PC div {
+        border: solid black;
+        padding: 1.5px;
+        margin: 5px;
+        width: 75%;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h3>SAVING BANK ACCOUNT OPENING FORM</h3>
+      <h5>(for BASIC/SMALL SB a/c)</h5>
+      <hr />
+      <fieldset class="custfieldset">
+        <legend>For Bank Use Only</legend>
+        <label for="Name">Name & Code of branch</label><br />
+        <label for="CustID">Cust ID</label>
+        <input type="text" id="CustID" name="Cust ID" /><br />
+        <label for="number">A/C No.</label>
+        <input type="text" id="number" name="AC no." />
+      </fieldset>
+      <fieldset class="dateandtime">
+        <label for="Date">Date</label>
+        <input type="date" id="Date" name="Date" /><br />
+        <label for="time">Time</label>
+        <input type="time" id="Time" name="time" />
+      </fieldset>
+      <br />
+      <fieldset class="vvv">
+        <legend>Personal Details</legend>
+        <div class="PC">
+          <div>1</div><div>name in full</div>
+          <div>
+            <input type="text" >
+          </div> 
+          <div>2</div><div>gaurdian</div>
+          <div>
+            <input type="text" >
+          </div> 
+          <div>3</div><div>gender</div>
+          <div>
+            <label for="option1">Male</label>
+            <input type="radio" id="option1" name="options" value="option1">
+         <br>
+            <label for="option2">Female</label>
+            <input type="radio" id="option2" name="options" value="option2">
+            <br>
+          </div> 
+          <div>4</div><div>occupation</div>
+          <div>
+            <input type="text" >
+          </div> 
+          <div>5</div><div>martial status</div>
+          <div>
+            <input type="text" >
+          </div> 
+          </div>
+
+      </fieldset>
+    </form>
+  </body>
+</html>
