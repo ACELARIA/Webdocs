@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    h4 { 
+        text-align: center;
+        color: blueviolet;
+        font-size: 200%;
+        padding: 3%;
+
+            }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);  
+            gap: 20px;  
+            width:170%;
+           
+            }
+            .image-grid h4 {
+            text-align: center;
+            font-size: 1rem;
+            margin-bottom: 0.5px;
+            color: #333;
+            font-weight: bold;
+            }
+
+           
+            .image-item {
+            background-color:lightcyan;
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+        .image-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 18px;
+            }
+
+            @media (max-width: 1024px) {
+                .image-container {
+                flex-direction: column; 
+               align-items: center;
+                }
+            }
+            
+            .image-item:hover {
+            transform: translateY(-10px);
+        }
+
+        header {
+            background-color: royalblue;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        header .logo h1 {
+            font-size: 2rem;
+            color: white;
+            font-weight: bold;
+        }
+        
+        header .search-bar {
+            display: flex;
+        }
+        
+        header .search-bar input {
+            padding: 10px;
+            width: 300px;
+            border-radius: 5px;
+            border: none;
+        }
+        
+        header .search-bar button {
+            padding: 10px 20px;
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        header .nav-links {
+            display: flex;
+        }
+        
+        header .nav-links a {
+            text-decoration: none;
+            color: white;
+            margin-left: 20px;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        
+        header .nav-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .main-content {
+            display: flex;
+            padding: 20px;
+        }
+              
+        .hero-content img{
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+        }
+        .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: yellow;
+            font-size: 4rem;
+            font-family: Bold Italic;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+        .text-overlay-1{
+            position: absolute;
+            top: 85%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: yellow;
+            font-size: 3rem;
+            font-family: bold italic;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+        .hero-content h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero-content h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .sidebar {
+            width: 25%;
+            background-color:lightblue;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+        }
+        
+        .sidebar h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .sidebar ul {
+            list-style-type: none;
+        }
+        
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+        
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1rem;
+        }
+        
+        .sidebar ul li a:hover {
+            color: #ff9900;
+        }
+        
+        .product-display {
+            width: 99%;
+        }
+        
+        .product-display h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 3fr);
+            gap: 10px;
+        }
+        
+        .product-card {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 18px;
+            transition: transform 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 100px;
+        }
+        
+        .product-card h3 {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+        
+        .product-card p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        
+        .product-card button {
+            padding: 10px 15px;
+            background-color: #ff9900;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            color: white;
+        }
+        
+        .product-card button:hover {
+            background-color: #e68a00;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        footer p {
+            font-size: 1rem;
+        }
+        
+        footer .social-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        
+        footer .social-links a:hover {
+            color: #ff9900;
+        }
+        </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon:Shopping Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Amazon</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for products, brands, categories...">
+            <button>Search</button>
+        </div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">Deals</a>
+            <a href="#">Account</a>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <a href="https://assets.aboutamazon.com/dims4/default/7cb1595/2147483647/strip/true/crop/1919x1080+1+0/resize/2480x1396!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2Fad%2F86%2F4a09b0044adf9e286f6523b02794%2Fsubs-pre-order-consent-background-image-cb578173463.jpg">
+            <img src="https://assets.aboutamazon.com/dims4/default/7cb1595/2147483647/strip/true/crop/1919x1080+1+0/resize/2480x1396!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2Fad%2F86%2F4a09b0044adf9e286f6523b02794%2Fsubs-pre-order-consent-background-image-cb578173463.jpg" alt="Prime video">
+            <h2><div class="text-overlay">Watch charactes as unique as you</h2></div>
+            <h4><div class="text-overlay-1">Prime video.</h4></div>
+            </a></div>
+    </section>
+<div class="image-container">
+    <div class="image-grid">
+        <h4>Style Her</h4><br>
+        <div class="image-grid">
+            <div class="image-item">
+                <h4>Clothes</h4>
+                <a href="https://cdn.fynd.com/v2/falling-surf-7c8bb8/fyprod/wrkr/products/pictures/item/free/original/000000410498919002/ZM5YdzvON-6DYB14_Y19DZ_3424_A.jpg">
+                <img src="https://cdn.fynd.com/v2/falling-surf-7c8bb8/fyprod/wrkr/products/pictures/item/free/original/000000410498919002/ZM5YdzvON-6DYB14_Y19DZ_3424_A.jpg" alt="Image 1">
+            </a></div>
+            <div class="image-item">
+                <h4>Jewelry</h4>
+                <a href="https://fsilverman.com/wp-content/uploads/2017/01/iStock-96332940-jewelry-box.jpg">
+                <img src="https://fsilverman.com/wp-content/uploads/2017/01/iStock-96332940-jewelry-box.jpg" alt="Image 2">
+            </a></div>
+            <div class="image-item">
+                <h4>Shoes</h4>
+                <a href="https://tiesta.in/cdn/shop/files/IVES3.jpg?v=1728293317">
+                <img src="https://tiesta.in/cdn/shop/files/IVES3.jpg?v=1728293317" alt="Image 3">
+            </a></div>
+            <div class="image-item">
+                <h4>Hair accessories for girls</h4>
+                <a href="https://cdn.fcglcdn.com/brainbees/images/products/583x720/15829192a.webp">
+                <img src="https://cdn.fcglcdn.com/brainbees/images/products/583x720/15829192a.webp" alt="Image 4">
+            </a></div>
+        </div>
+    </div>
+    
+    <div class="image-grid">
+        <h4>Bring in fresh energy</h4><br>
+        <div class="image-grid">
+              <div class="image-item">
+                <h4>Gym Clothes</h4>
+                <a href="https://m.media-amazon.com/images/I/61W4D-hLfcL._SY879_.jpg">
+                <img src="https://m.media-amazon.com/images/I/61W4D-hLfcL._SY879_.jpg" alt="Image 4">
+            </a></div>
+            <div class="image-item">
+                <h4>Dumbells</h4>
+                <a href="https://www.bullrockfitness.com/wp-content/uploads/2021/05/urethane_round_dumbbells-2048x2048.jpg">
+                <img src="https://www.bullrockfitness.com/wp-content/uploads/2021/05/urethane_round_dumbbells-2048x2048.jpg" alt="Image 5">
+            </a></div>
+            <div class="image-item">
+                <h4>Outdoors</h4>
+                <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8cyIWJ5GGxyRN0uVBUlm8QAFKMmoWk46lHA&s">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8cyIWJ5GGxyRN0uVBUlm8QAFKMmoWk46lHA&s" alt="Image 6">
+                </a></div>
+            <div class="image-item">
+                <h4>Tools</h4>
+                <a href="https://cdn.aceuae.com/img/ACE/UAE/Catalogs/homeworks-ace-master-catalog/en_AE/small/1304951_104.jpg">
+                <img src="https://cdn.aceuae.com/img/ACE/UAE/Catalogs/homeworks-ace-master-catalog/en_AE/small/1304951_104.jpg" alt="Image 7">
+                </a></div>
+        </div>
+    </div>
+    <div class="image-grid">
+        <h4>Must see fashion deals</h4><br>
+        <div class="image-grid">
+            <div class="image-item">
+                <h4>Bags</h4>
+                <a href="https://m.media-amazon.com/images/I/71T8EVp49iL._AC_UY1000_.jpg">
+                <img src="https://m.media-amazon.com/images/I/71T8EVp49iL._AC_UY1000_.jpg" alt="Image 8">
+                </a></div>
+            <div class="image-item">
+                <h4>Sundresses</h4>
+                <a href="https://i.pinimg.com/originals/b9/55/f2/b955f2f8c3d902384a6efd2c7bda70b9.jpg">
+                <img src="https://i.pinimg.com/originals/b9/55/f2/b955f2f8c3d902384a6efd2c7bda70b9.jpg" alt="Image 9">
+                </a></div>
+            <div class="image-item">
+                <h4>Sunglasses</h4>
+                <a href="https://m.media-amazon.com/images/I/51wwVl2r-WL._AC_UY1100_.jpg">
+                <img src="https://m.media-amazon.com/images/I/51wwVl2r-WL._AC_UY1100_.jpg" alt="Image 10">
+                </a></div>
+            <div class="image-item">
+                <h4>Furniture</h4>
+                <a href="https://www.ikea.com/in/en/images/products/songesand-bedroom-furniture-set-of-5-brown__1101651_pe866465_s5.jpg?f=s">
+                <img src="https://www.ikea.com/in/en/images/products/songesand-bedroom-furniture-set-of-5-brown__1101651_pe866465_s5.jpg?f=s" alt="Image 11">
+                </a></div>
+        </div>
+    </div>
+</div>
+        <section class="product-display">
+            <h4>Featured Products</h4>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/81t94YrdkFL.jpg" alt="Product 1">
+                    <h3>Rubber bands</h3>
+                    <p>₹19.99</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://rukminim3.flixcart.com/image/850/1000/xif0q/chocolate/4/e/c/61-dairy-milk-silk-chocolate-bar-1-cadbury-original-imagxgdpfgjqyecm.jpeg?q=90&crop=false" alt="Product 2">
+                    <h3>Chocolates</h3>
+                    <p>₹29.99</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.etsystatic.com/29356732/r/il/34dc4c/5159352621/il_fullxfull.5159352621_guwf.jpg" alt="Product 3">
+                    <h3>Snacks</h3>
+                    <p>₹39.99</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/51eanwbI4FL.jpg" alt="Product 4">
+                    <h3>Soap and Lotion</h3>
+                    <p>₹49.99</p>
+                    <button>Add to Cart</button>
+                </div>
+                
+            </div>
+        </section>
+    </div>*/
+
+    <footer>
+        <p>&copy; 2025 ShopMate | All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+</body>
+</html>
