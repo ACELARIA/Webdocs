@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>/* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        
+        /* Header */
+        header {
+            background-color: #ff6347;
+            color: white;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 100;
+        }
+        
+        header .logo h1 {
+            font-size: 2rem;
+        }
+        
+        header nav ul {
+            list-style: none;
+            display: flex;
+        }
+        
+        header nav ul li {
+            margin-left: 25px;
+        }
+        
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            padding: 5px 10px;
+            transition: background-color 0.3s;
+        }
+        
+        header nav ul li a:hover {
+            background-color: #ff4500;
+            border-radius: 5px;
+        }
+        
+        header .search-bar {
+            position: absolute;
+            top: 50%;
+            right: 5%;
+            transform: translateY(-50%);
+            display: flex;
+        }
+        
+        header .search-bar input {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            width: 300px;
+        }
+        
+        header .search-bar button {
+            padding: 10px;
+            background-color: #ffd700;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        header .search-bar button:hover {
+            background-color: #ff6347;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: url('hero-image.jpg') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color:red;
+        }
+        .hero-content img{
+            width: 90%;
+
+            height: auto;
+            border-radius: 6px;
+        }
+        .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 6rem;
+            font-family: Bold Italic;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+        .text-overlay-1{
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 1.5rem;
+            font-family: Arial, sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+        
+        .hero-content h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .order-button {
+            padding: 15px 30px;
+            background-color: #ffd700;
+            border: none;
+            font-size: 1.2rem;
+            color: #333;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .order-button:hover {
+            background-color: #ff6347;
+        }
+        
+        /* Restaurants Section */
+        .restaurants {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        
+        .restaurants h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        
+        .restaurant-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        .restaurant-item {
+            background-color: white;
+            padding: 20px;
+            width: 30%;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            transition: transform 0.3s;
+        }
+        
+        .restaurant-item:hover {
+            transform: translateY(-10px);
+        }
+        
+        .restaurant-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+        .restaurant-item h3 {
+            margin-top: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .restaurant-item p {
+            margin-top: 5px;
+            font-size: 1.2rem;
+            color: #777;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        footer p {
+            font-size: 1rem;
+        }
+        
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato - Online Food Delivery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Zomato</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">Order Now</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for food, restaurants, or cuisines...">
+            <button>Search</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <img src="https://i0.wp.com/blog.petpooja.com/wp-content/uploads/2021/10/cultural-cuisine.jpg?resize=1200%2C675&ssl=1" alt="ZOMATO">
+            <h2><div class="text-overlay">ZOMATO</h2></div>
+            <h4><div class="text-overlay-1">Discover the best food and drinks in Chennai.</h4></div>
+        </div>
+    </section>
+
+    <section class="restaurants">
+        <h2>Top Restaurants Near You</h2>
+        <div class="restaurant-list">
+            <div class="restaurant-item">
+                <img src="https://c.ndtvimg.com/2021-04/umk8i7ko_pasta_625x300_01_April_21.jpg?im=FaceCrop,algorithm=dnn,width=620,height=350" alt="Restaurant 1">
+                <h3>Order Food Online</h3>
+            </div>
+            <div class="restaurant-item">
+                <img src="https://asiasociety.org/sites/default/files/styles/1200w/public/2019-05/190523_junzibing_asiablog.jpg" alt="Restaurant 2">
+                <h3>Go out for a meal</h3>
+            </div>
+            <div class="restaurant-item">
+                <img src="https://sukhis.com/app/uploads/2022/11/veggie-platter-1536x1129.jpg" alt="Restaurant 3">
+                <h3>Meetings and parties</h3>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Foodie Express | All rights reserved.</p>
+            <p>Follow us on <a href="#">Instagram</a>, <a href="#">Facebook</a>, and <a href="#">Twitter</a></p>
+        </div>
+    </footer>
+</body>
+</html>
