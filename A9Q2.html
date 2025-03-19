@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        
+        body {
+          font-family: Arial, sans-serif;
+          line-height: 1.6;
+          background-color: #f4f4f4;
+        }
+        
+        header {
+          text-align:center;
+          background-color: #333;
+          color: white;
+          padding: 10px 0;
+        }
+        
+        header .container {
+          width: 90%;
+          max-width: 1200px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          text-align: center;
+
+        }
+        
+        header .logo h1 {
+          font-size: 30px;
+          text-align: center;
+
+        }
+        header .logo-img {
+            width: 100px; 
+            height: auto;
+            margin-right: 1000px;
+            margin-bottom: -100px;
+            }
+
+        header .logoo-img {
+            width: 100px; 
+            height: auto;
+            margin-left: 1000px;
+            margin-top: -100px;
+            }
+
+            .image-slider {
+                position: relative;
+                max-width: 100%;
+                width: 600px; 
+                margin: 0 auto;
+                overflow: hidden;
+                }
+
+        .slider-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider-images img {
+            width: 100%;
+            height: auto;
+            }
+
+        button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 24px;
+            }
+
+        button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            }
+
+        .prev {
+        left: 0;
+        }
+
+        .next {
+        right: 0;
+            }
+
+        .list {
+            list-style-type: none;; 
+            padding:auto;
+            margin-right:1000px;
+            margin-bottom: -200px;
+            
+            }
+
+        .list-1 {
+            list-style-type: none;; 
+            padding:auto;
+            margin-right:-1000px;
+            margin-top: -200px;
+        }
+
+        .list li {
+            margin: 2.5px; 
+            font-size: 15px; 
+
+            }
+
+        .list-1 li {
+            margin: 2.5px; 
+            font-size: 15px; 
+
+             }
+
+            .list li:hover {
+                text-decoration: underline;
+            }
+            .list-1 li:hover {
+                text-decoration: underline;
+            }
+        .hero nav ul {
+          list-style: none;
+          display: flex;
+        }
+        
+        .hero nav ul li {
+          margin-left: 150px;
+          margin-top: -70px;
+        }
+        
+        .hero nav ul li a {
+          color: white;
+          text-decoration: none;
+          font-size: 18px;
+        }
+        
+        .hero nav ul li a:hover {
+          text-decoration: underline;
+        }
+        
+        .hero {
+          background: blue;
+          color: white;
+          padding: 80px 0;
+          text-align: center;
+        }
+        
+        .hero h2 {
+          font-size: 48px;
+          margin-bottom: 20px;
+        }
+        
+        .hero p {
+          font-size: 20px;
+          margin-bottom: 30px;
+        }
+        
+        .cta-btn {
+          padding: 10px 20px;
+          background-color: #333;
+          color: white;
+          text-decoration: none;
+          font-size: 18px;
+          border-radius: 5px;
+        }
+        
+        .cta-btn:hover {
+          background-color: #555;
+        }
+        
+        .section {
+          padding: 5px 0;
+          background-color: #fff;
+          text-align: center;
+          background-color: lightblue;
+        }
+        
+        .section h2 {
+          font-size: 36px;
+          margin-bottom: 20px;
+        }
+        
+        .section p {
+          font-size: 18px;
+          margin-bottom: 20px;
+        }
+        
+        .container {
+          width: 90%;
+          max-width: 1200px;
+          margin: 0 auto;
+        }      
+              
+        footer {
+          background-color: #333;
+          color: white;
+          padding: 20px 0;
+          text-align: center;
+        }
+        
+        footer p {
+          font-size: 16px;
+        }
+        </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>College</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpRxhzklIZxte0dSbzfqmeSUxIg4jzS5Gi0w&s" alt="logo" class="logo-img">
+        <h1>Sardar Vallabhbhai National Institute Of Technology</h1>
+        <h2>सरदार वल्लभभाई राष्ट्रीय प्रौद्योगिकी संस्थान</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxQxp-erY8CBFAB6YZT-NIx9N8jMzHFkU9Jw&s" alt="logo" class="logoo-img">
+      </div>
+      </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+        <nav>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#courses">Courses</a></li>
+              <li><a href="#faculty">Faculty</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        <ul class="list">
+            <li>Minutes of Meetings</li>
+            <li>Memorandum of Understanding</li>
+            <li>Ek Bharat Shreshtha Bharat</li>
+            <li>Achievements</li>
+            <li>Central Library</li>
+            <li>Alumni</li>
+          </ul>
+        </div>
+          <div class="image-slider">
+            <div class="slider-images">
+              <img src="https://www.svnit.ac.in/images/slider/img4.png" alt="Image 1">
+              <img src="https://www.svnit.ac.in/images/slider/123.jpg" alt="Image 2">
+              <img src="https://www.svnit.ac.in/images/slider/sardar.JPG" alt="Image 3">
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+          </div>
+          <ul class="list-1">
+            <li>Samarth-eGov</li>
+            <li>Chapters | Clubs | Society</li>
+            <li>Magazine | Newsletter</li>
+            <li>Admission</li>
+            <li>Scholarship</li>
+            <li>Fee Structure</li>
+          </ul>
+        </div>
+  </section>
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>Our design college offers a unique blend of creativity, technology, and innovation to help students become experts in the field of design.</p>
+    </div>
+  </section>
+
+  <section id="faculty" class="section">
+    <div class="container">
+      <h2>Our Faculty</h2>
+      <p>Meet our esteemed faculty who bring years of experience and knowledge to the classroom.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Email us at: <a href="mailto:info@svnit.com">info@svnit.com</a></p>
+      <p>Address: Ichchhanath Surat- Dumas, Road, Keval Chowk, Surat, Gujarat 395007</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 SVNIT College. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    let slideIndex = 0;
+  
+    function showSlide(index) {
+      const slides = document.querySelectorAll('.slider-images img');
+      if (index >= slides.length) slideIndex = 0;
+      if (index < 0) slideIndex = slides.length - 1;
+      const offset = -slideIndex * 100;
+      document.querySelector('.slider-images').style.transform = `translateX(${offset}%)`;
+    }
+  
+    function moveSlide(n) {
+      slideIndex += n;
+      showSlide(slideIndex);
+    }
+  
+    showSlide(slideIndex);
+  </script>
+  
+</body>
+</html>
